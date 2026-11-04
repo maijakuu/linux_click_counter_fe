@@ -10,8 +10,14 @@
   <main class="page">
     <h1>Viikko 2: Python verkkosovellus</h1>
     <p>
-      Tässä tehtävässä tietokantana käytin MySQL:ää ja laskuri tallentaa jokaisen
-      sivun latauksen kyseiseen tietokantaan.
+Tässä tehtävässä toteutin sivulaskurin, joka näyttää sivun latauskertojen kokonaismäärän. 
+Frontend ja backend ovat erillisissä repositorioissa. Kun käyttäjä avaa sivun, 
+frontend lähettää backendin /api/loads-rajapintaan POST-pyynnön, jonka JSON-sisältö on {"loads": 1}. 
+Backend tarkistaa, että vastaanotettu arvo on positiivinen kokonaisluku, ja kasvattaa MySQL-tietokannan 
+page_load_counter-taulun total_loads-arvoa yhdellä. Tämän jälkeen backend palauttaa päivitetyn 
+kokonaismäärän frontendille, joka näyttää sen sivulla. Latauskerrat tallentuvat tietokantaan 
+yhteisenä lukuna, eivät erillisinä tietueina.
+<table></table>
     </p>
     <!-- Replace the placeholder value with the count returned by the MySQL-backed backend. -->
     <div class="counter" aria-label="Sivun latauskerrat">
