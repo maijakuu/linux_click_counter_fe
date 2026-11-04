@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: #000;
+  color: #fff2a6;
+  font-family: "Arial Narrow", Arial, sans-serif;
+}
+
+.page {
+  width: min(100% - 2rem, 42rem);
+  margin: 0 auto;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 6vw, 3rem);
+}
+
+p {
+  margin: 0 auto 2rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.counter {
+  display: grid;
+  width: 10rem;
+  aspect-ratio: 1;
+  margin: 0 auto;
+  place-items: center;
+  background: #a88400;
+  border: 3px solid #fff2a6;
+}
+
+.counter__value {
+  color: #fff2a6;
+  font-size: 4rem;
+  font-weight: 700;
+}
